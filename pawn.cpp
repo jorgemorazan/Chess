@@ -17,6 +17,7 @@ bool Pawn::isValidMove(Piece*** board, Position destiny){
 		int diffX = position.getX()-destiny.getX();
 		if((diffY==1&&diffX==0) || (diffY==2&&firstMove&&diffX==0)){ //primer movimiento o movimiento hacia adelante
 			if(board[destiny.getY()][destiny.getX()] == NULL)
+				firstMove=false;//Sólo el primer turno de esa pieza puede mover dos casillas
 				return true;
 			return false;
 		}
@@ -32,6 +33,7 @@ bool Pawn::isValidMove(Piece*** board, Position destiny){
 		int diffX = destiny.getX()-position.getX();
 		if((diffY==1&&diffX==0) || (diffY==2&&firstMove&&diffX==0)){ //primer movimiento o movimiento hacia adelante
 			if(board[destiny.getY()][destiny.getX()] == NULL)
+				firstMove=false;////Sólo el primer turno de esa pieza puede mover dos casillas
 				return true;
 			return false;
 		}
