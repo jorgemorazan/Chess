@@ -38,7 +38,7 @@ int main(int argc, char const *argv[]){
 	if(archivo.fail()){//Verifica si hay algo
 		cout<<"WELCOME"<<endl;
 	}else{
-		while(!archivo.eof){//Carga archivo
+		while(!archivo.eof()){//Carga archivo
 			for (int i = 0; i < ROWS; ++i)
 			{
 				for (int j = 0; j < COLS; ++j)

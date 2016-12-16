@@ -183,7 +183,7 @@ bool Bishop::isValidMove(Piece***board, Position destiny){
 						validMove = false;
 					}
 				}
-
+			}
 		}
 		
 	}else{
